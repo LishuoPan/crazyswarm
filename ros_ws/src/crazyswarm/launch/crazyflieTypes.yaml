@@ -1,5 +1,80 @@
 crazyflieTypes:
-  default:
+  default_m1:
+    bigQuad: False
+    batteryVoltageWarning: 3.8  # V
+    batteryVoltateCritical: 3.7 # V
+    markerConfiguration: 1 # change to 3 for single marker tracking
+    dynamicsConfiguration: 0
+    firmwareParams:
+      ctrlMel:
+        kp_xy: 0.4 #0.6 # p for position
+        kd_xy: 0.2 # 0.35 # d for position
+        ki_xy: 0.05
+        i_range_xy: 2.0
+        kR_xy: 70000 # p for attitude
+        kw_xy: 20000 # d for attitude
+        kR_z: 60000 # 70000 # p for yaw
+        kw_z: 12000 # 30000  # d for yaw
+        ki_m_z: 500 #0 #20000     # i for yaw
+        i_range_m_z: 1500 # i range for yaw
+        kd_omega_rp: 200 # roll and pitch angular velocity d gain
+        kp_z: 1.25
+        kd_z: 0.4
+        ki_z: 0.05
+        i_range_z: 0.4
+        mass: 0.032
+        massThrust: 132000
+  default_m2:
+    bigQuad: False
+    batteryVoltageWarning: 3.8  # V
+    batteryVoltateCritical: 3.7 # V
+    markerConfiguration: 2 # change to 3 for single marker tracking
+    dynamicsConfiguration: 0
+    firmwareParams:
+      ctrlMel:
+        kp_xy: 0.4 #0.6 # p for position
+        kd_xy: 0.2 # 0.35 # d for position
+        ki_xy: 0.05
+        i_range_xy: 2.0
+        kR_xy: 70000 # p for attitude
+        kw_xy: 20000 # d for attitude
+        kR_z: 60000 # 70000 # p for yaw
+        kw_z: 12000 # 30000  # d for yaw
+        ki_m_z: 500 #0 #20000     # i for yaw
+        i_range_m_z: 1500 # i range for yaw
+        kd_omega_rp: 200 # roll and pitch angular velocity d gain
+        kp_z: 1.25
+        kd_z: 0.4
+        ki_z: 0.05
+        i_range_z: 0.4
+        mass: 0.032
+        massThrust: 132000
+  default_m3:
+    bigQuad: False
+    batteryVoltageWarning: 3.8  # V
+    batteryVoltateCritical: 3.7 # V
+    markerConfiguration: 3 # change to 3 for single marker tracking
+    dynamicsConfiguration: 0
+    firmwareParams:
+      ctrlMel:
+        kp_xy: 0.4 #0.6 # p for position
+        kd_xy: 0.2 # 0.35 # d for position
+        ki_xy: 0.05
+        i_range_xy: 2.0
+        kR_xy: 70000 # p for attitude
+        kw_xy: 20000 # d for attitude
+        kR_z: 60000 # 70000 # p for yaw
+        kw_z: 12000 # 30000  # d for yaw
+        ki_m_z: 500 #0 #20000     # i for yaw
+        i_range_m_z: 1500 # i range for yaw
+        kd_omega_rp: 200 # roll and pitch angular velocity d gain
+        kp_z: 1.25
+        kd_z: 0.4
+        ki_z: 0.05
+        i_range_z: 0.4
+        mass: 0.032
+        massThrust: 132000
+  default_m4:
     bigQuad: False
     batteryVoltageWarning: 3.8  # V
     batteryVoltateCritical: 3.7 # V
@@ -138,33 +213,44 @@ numMarkerConfigurations: 4
 markerConfigurations:
   "0":  # for standard Crazyflie
     numPoints: 4
-    offset: [0.0, -0.01, -0.04]
+    offset: [0.0, 0.0, -0.04]
     points:
-      "0": [0.0177184,0.0139654,0.0557585]
-      "1": [-0.0262914,0.0509139,0.0402475]
-      "2": [-0.0328889,-0.02757,0.0390601]
-      "3": [0.0431307,-0.0331216,0.0388839]
-  "1": # medium frame
+      "0": [0.0115995,0.00941161,0.0454861]  # top
+      "1": [-0.0378468,-0.03401,0.033387]  # back left   (M3)
+      "2": [-0.0353935,0.0430707,0.0268908]  # back right  (M2)
+      "3": [ -0.0373004,-0.0333516,0.0345423]  # front right (M1)
+  "1":  # for standard Crazyflie
     numPoints: 4
-    offset: [0.0, 0.0, -0.03]
+    offset: [0.0, 0.0, -0.04]
     points:
-      "0": [-0.00896228,-0.000716753,0.0716129]
-      "1": [-0.0156318,0.0997402,0.0508162]
-      "2": [0.0461693,-0.0881012,0.0380672]
-      "3": [-0.0789959,-0.0269793,0.0461144]
-  "2": # big frame
+      "0": [0.0138475,0.0218739,0.0549926]
+      "1": [-0.0392876,0.0401382,0.0379842]
+      "2": [0.0341222,0.060054,0.0370185]
+      "3": [-0.0202743,-0.0327307,0.0377942]
+  "2":  # for standard Crazyflie
     numPoints: 4
-    offset: [0.0, 0.0, -0.06]
+    offset: [0.0, 0.0, -0.04]
     points:
-      "0": [0.0558163,-0.00196302,0.0945539]
-      "1": [-0.0113941,0.00945842,0.0984811]
-      "2": [-0.0306277,0.0514879,0.0520456]
-      "3": [0.0535816,-0.0400775,0.0432799]
-  "3":  # for standard Crazyflie with a single marker
-    numPoints: 1
-    offset: [0.0, -0.01, -0.04]
+      "0": [0.0109666,0.00508689,0.054687]
+      "1": [0.0421952,-0.0394636,0.0372561]
+      "2": [0.0401444,0.0372406,0.036494]
+      "3": [-0.0357723,0.0354601,0.0375267]
+  "3":  # for standard Crazyflie
+    numPoints: 4
+    offset: [0.0, 0.0, -0.04]
     points:
-      "0": [0.0177184,0.0139654,0.0557585]
+      "0": [0.0184815,0.00887332,0.0534412]
+      "1": [0.0486787,0.0413829,0.0370666]
+      "2": [-0.0281034,-0.0355515,0.0362072]
+      "3": [0.0494241,-0.0363607,0.0379706]
+  "4":  # for standard Crazyflie
+    numPoints: 4
+    offset: [0.0, 0.0, -0.04]
+    points:
+      "0": [0.0115995,0.00941161,0.0454861]  # top
+      "1": [-0.0378468,-0.03401,0.033387]  # back left   (M3)
+      "2": [-0.0353935,0.0430707,0.0268908]  # back right  (M2)
+      "3": [ -0.0373004,-0.0333516,0.0345423]  # front right (M1)
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":
