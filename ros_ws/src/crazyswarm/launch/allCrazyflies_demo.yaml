@@ -1,0 +1,188 @@
+crazyflies:
+  - id: 1
+    channel: 80
+    initialPosition: [-1.4, 0.2, 0.0] # end: [4.7, 2.2, 0.0]
+    type: default_m1
+  - id: 2
+    channel: 100
+    initialPosition: [-1.0, 1.5, 0.0]
+    type: default_m2
+  - id: 3
+    channel: 120
+    initialPosition: [-0.5, 1.5, 0.0]
+    type: default_m3
+  - id: 4
+    channel: 80
+    initialPosition: [0.0, 1.5, 0.0]
+    type: default_m4
+  - id: 5
+    channel: 100
+    initialPosition: [3.4, -2.2, 0.0] # end: [-4.3, -1.0, 0.0]
+    type: default_m1
+  - id: 6
+    channel: 120
+    initialPosition: [1.0, 1.5, 0.0]
+    type: default_m2
+  - id: 9
+    channel: 80
+    initialPosition: [-1.0, 1.0, 0.0]
+    type: default_m1
+  - id: 11
+    channel: 100
+    initialPosition: [0.0, 1.0, 0.0]
+    type: default_m3
+  - id: 14
+    channel: 120
+    initialPosition: [1.5, 1.0, 0.0]
+    type: default_m2
+  - id: 16
+    channel: 100
+    initialPosition: [-1.0, 0.5, 0.0]
+    type: default_m4
+  - id: 17
+    channel: 120
+    initialPosition: [-0.5, 0.5, 0.0]
+    type: default_m1
+  - id: 19
+    channel: 80
+    initialPosition: [0.5, 0.5, 0.0]
+    type: default_m3
+  - id: 20
+    channel: 100
+    initialPosition: [1.0, 0.5, 0.0]
+    type: default_m4
+  - id: 21
+    channel: 120
+    initialPosition: [1.5, 0.5, 0.0]
+    type: default_m1
+  - id: 23
+    channel: 80
+    initialPosition: [-1.0, 0.0, 0.0]
+    type: default_m3
+  - id: 24
+    channel: 100
+    initialPosition: [-0.5, 0.0, 0.0]
+    type: default_m4
+  - id: 25
+    channel: 120
+    initialPosition: [0.0, 0.0, 0.0]
+    type: default_m1
+  - id: 27
+    channel: 80
+    initialPosition: [1.0, 0.0, 0.0]
+    type: default_m3
+  - id: 28
+    channel: 100
+    initialPosition: [1.5, 0.0, 0.0]
+    type: default_m4
+  - id: 30
+    channel: 120
+    initialPosition: [-1.0, -0.5, 0.0]
+    type: default_m2
+  - id: 31
+    channel: 80
+    initialPosition: [-0.5, -0.5, 0.0]
+    type: default_m3
+  - id: 33
+    channel: 100
+    initialPosition: [0.5, -0.5, 0.0]
+    type: default_m1
+  - id: 34
+    channel: 120
+    initialPosition: [1.0, -0.5, 0.0]
+    type: default_m2
+  - id: 35
+    channel: 80
+    initialPosition: [1.5, -0.5, 0.0]
+    type: default_m3
+  - id: 36
+    channel: 100
+    initialPosition: [-1.5, -1.0, 0.0]
+    type: default_m4
+  - id: 38
+    channel: 120
+    initialPosition: [-0.5, -1.0, 0.0]
+    type: default_m2
+  - id: 40
+    channel: 80
+    initialPosition: [0.5, -1.0, 0.0]
+    type: default_m4
+  - id: 41
+    channel: 100
+    initialPosition: [1.0, -1.0, 0.0]
+    type: default_m1
+  - id: 43
+    channel: 120
+    initialPosition: [-1.5, -1.5, 0.0]
+    type: default_m3
+  - id: 44
+    channel: 80
+    initialPosition: [-1.0, -1.5, 0.0]
+    type: default_m4
+  - id: 47
+    channel: 100
+    initialPosition: [0.5, -1.5, 0.0]
+    type: default_m3
+  - id: 50
+    channel: 120
+    initialPosition: [-2.0, 0.0, 0.0]
+    type: default_m2
+
+#############################################################################
+
+# obstacle positions:
+# obstacle 1
+# upper top left: 
+# x: 4252.25 y: -1885.863 z: 1668.923 ## [4.25, -1.85, 1.675]
+# upper top right: 
+# x: 4829.43 y: -1851.346 z: 1676.978 ## [4.85, -1.85, 1.675]
+# upper bottom left:
+# x: 4287.709 y: -2457.499 z: 1664.268 ## [4.25, -2.45, 1.675]
+# upper bottom right:
+# x: 4863.7 y: -2430.301 z: 1675.82 ## [4.85, -2.45, 1.675]
+# lower top left:
+# x: 4240.471 y: -1867.877 z: 26.33 ## [4.25, -1.85, 1.675]
+# lower top right:
+# x: 4921.295 y: -1849.29 z: 32.536 ## [4.95, -1.85, 1.675]
+# lower bottom left:
+# x: 4266.94 y: -2482.18 z: 22.4 ## [4.25, -2.45, 1.675]
+# lower bottom right:
+# x: 4942.325 y: -2449.727 z: 22.956 ## [4.95, -2.45, 1.675]
+
+# obstacle positions:
+# obstacle 2
+# upper top left: 
+# x: 262.863 y: 2045.475  z: 1827.076  ## []
+# upper top right: 
+# x: 832.976 y: 2045.105  z: 1824.085  ## []
+# upper bottom left:
+# x: 283.127 y: 1469.661 z: 1827.258 ## []
+# upper bottom right:
+# x: 854.557 y: 1482.43 z: 1825.067  ## []
+# lower top left:
+# x: 236.32 y: 2044.755  z: 52.062  ## []
+# lower top right:
+# x: 880.402 y: 2048.596 z: 79.821 ## []
+# lower bottom left:
+# x: 236.887 y: 1456.451 z: 91.131 ## []
+# lower bottom right:
+# x: 880.669 y: 1457.509 z:64.209 ## []
+
+# obstacle positions:
+# obstacle 3
+# upper top left: 
+# x: -2916.079 y: -1371.187 z: 1824.494  ## []
+# upper top right: 
+# x: -2344.606 y: -1334.659 z: 1819.4 ## []
+# upper bottom left:
+# x: -2883.752 y: -1936.224 z: 1817.049 ## []
+# upper bottom right:
+# x: -2314.237 y: -1905.444 z: 1819.455 ## []
+# lower top left:
+# x: -2943.531 y: -1348.547 z: 47.584 ## []
+# lower top right:
+# x: -2301.004 y: -1320.335 z: 30.759 ## []
+# lower bottom left:
+# x: -2917.41 y: -1940.58 z: 27.35 ## []
+# lower bottom right:
+# x: -2278.998 y: 1902.697 z: 57.374 ## []
