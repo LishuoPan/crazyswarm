@@ -1,79 +1,83 @@
 crazyflies:
   - id: 1
     channel: 80
-    initialPosition: [-1.4, 0.2, 0.0] # end: [4.7, 2.2, 0.0]
+    initialPosition: [-1.430, 0.203, 0.021] # end: [4.715, 2.247, 0.050]
     type: default_m1
   - id: 2
     channel: 100
-    initialPosition: [-1.0, 1.5, 0.0]
+    initialPosition: [2.391, 2.621, 0.030] # end: [-.864, -2.785, 0.019]
     type: default_m2
   - id: 3
     channel: 120
-    initialPosition: [-0.5, 1.5, 0.0]
+    initialPosition: [-5.574, -2.221, 0.017] # end: [-2.805, 2.099, 0.034]
     type: default_m3
   - id: 4
     channel: 80
-    initialPosition: [0.0, 1.5, 0.0]
+    initialPosition: [0.166, -1.352, 0.021] # end: [0.112, 3.237, 0.30]
     type: default_m4
   - id: 5
     channel: 100
-    initialPosition: [3.4, -2.2, 0.0] # end: [-4.3, -1.0, 0.0]
+    initialPosition: [3.434, -2.219, 0.027] # end: [-4.307, -0.997, 0.022]
     type: default_m1
   - id: 6
     channel: 120
-    initialPosition: [1.0, 1.5, 0.0]
+    initialPosition: [-3.741, 1.048, 0.021] # end: [4.821, -0.531, 0.042]
     type: default_m2
   - id: 9
     channel: 80
-    initialPosition: [-1.0, 1.0, 0.0]
+    initialPosition: [5.809, 0.432, 0.040] # end: [0.678, 1.039, 0.029]
     type: default_m1
   - id: 11
     channel: 100
-    initialPosition: [0.0, 1.0, 0.0]
+    initialPosition: [-6.168, 2.673, 0.028] # end: [-2.138, -0.673, 0.024]
     type: default_m3
   - id: 14
     channel: 120
-    initialPosition: [1.5, 1.0, 0.0]
+    initialPosition: [-1.494, 3.479, 0.035] # end: [2.853, 0.244, 0.032]
     type: default_m2
+  - id: 15
+    channel: 80
+    initialPosition: [-2.554, -2.268, 0.018] # end: [-6.054, 1.447, 0.021]
+    type: default_m3
   - id: 16
     channel: 100
-    initialPosition: [-1.0, 0.5, 0.0]
+    initialPosition: [6.394, 3.820, 0.055] # end: [-3.679, -2.157, 0.013]
     type: default_m4
   - id: 17
     channel: 120
-    initialPosition: [-0.5, 0.5, 0.0]
+    initialPosition: [-5.283, 0.089, 0.020] # end: [1.561, -1.651, 0.022]
     type: default_m1
   - id: 19
     channel: 80
-    initialPosition: [0.5, 0.5, 0.0]
+    initialPosition: [-0.365, 1.072, 0.024] # end: [6.108, -2.641, 0.023]
     type: default_m3
   - id: 20
     channel: 100
-    initialPosition: [1.0, 0.5, 0.0]
+    initialPosition: [2.265, -0.406, 0.026] # end: [3.546, 3.412, 0.040]
     type: default_m4
   - id: 21
     channel: 120
-    initialPosition: [1.5, 0.5, 0.0]
+    initialPosition: [6.090, 0.976, 0.036] # end: [, 1.447, 0.021]
     type: default_m1
   - id: 23
     channel: 80
-    initialPosition: [-1.0, 0.0, 0.0]
+    initialPosition: [0.843, -2.029, 0.021] # end: [-1.741, 1.184, 0.023]
     type: default_m3
   - id: 24
     channel: 100
-    initialPosition: [-0.5, 0.0, 0.0]
+    initialPosition: [3.943, 1.004, 0.036] # end: [0.919, -0.668, 0.024]
     type: default_m4
   - id: 25
     channel: 120
-    initialPosition: [0.0, 0.0, 0.0]
+    initialPosition: [-4.693, 1.593, 0.004] # end: [1.472, 2.056, 0.024]
     type: default_m1
   - id: 27
     channel: 80
-    initialPosition: [1.0, 0.0, 0.0]
+    initialPosition: [3.840, -0.822, 0.033] # end: [-5.093, -3.035, 0.011]
     type: default_m3
   - id: 28
     channel: 100
-    initialPosition: [1.5, 0.0, 0.0]
+    initialPosition: [-0.864, 1.995, 0.026] # end: [2.384, -2.714, 0.023]
     type: default_m4
   - id: 30
     channel: 120
