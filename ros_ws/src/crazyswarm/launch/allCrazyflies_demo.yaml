@@ -23,14 +23,30 @@ crazyflies:
     channel: 120
     initialPosition: [-3.741, 1.048, 0.021] # end: [4.821, -0.531, 0.042]
     type: default_m2
+  - id: 8
+    channel: ??
+    initialPosition: [0.557, -0.003, 0.028] # end: [-2.554, 3.234, 0.030]
+    type: default_m4
   - id: 9
     channel: 80
     initialPosition: [5.809, 0.432, 0.040] # end: [0.678, 1.039, 0.029]
     type: default_m1
+  - id: 10
+    channel: ??
+    initialPosition: [4.647, 2.881, 0.051] # end: [6.345, -0.907, 0.041]
+    type: default_m2  
   - id: 11
     channel: 100
     initialPosition: [-6.168, 2.673, 0.028] # end: [-2.138, -0.673, 0.024]
     type: default_m3
+  - id: 12
+    channel: ??
+    initialPosition: [-2.032, -2.988, 0.021] # end: [2.108, 0.859, 0.030]
+    type: default_m4
+  - id: 13
+    channel: ??
+    initialPosition: [1.676, -2.401, 0.027] # end: [-4.378, 0.572, 0.015]
+    type: default_m1  
   - id: 14
     channel: 120
     initialPosition: [-1.494, 3.479, 0.035] # end: [2.853, 0.244, 0.032]
@@ -47,6 +63,10 @@ crazyflies:
     channel: 120
     initialPosition: [-5.283, 0.089, 0.020] # end: [1.561, -1.651, 0.022]
     type: default_m1
+  - id: 18
+    channel: ??
+    initialPosition: [0.699, 2.806, 0.011] # end: [-3.133, -2.927, 0.015]
+    type: default_m2  
   - id: 19
     channel: 80
     initialPosition: [-0.365, 1.072, 0.024] # end: [6.108, -2.641, 0.023]
@@ -190,3 +210,22 @@ crazyflies:
 # x: -2917.41 y: -1940.58 z: 27.35 ## []
 # lower bottom right:
 # x: -2278.998 y: 1902.697 z: 57.374 ## []
+
+#obstacle positions:
+# obstacle 4
+# upper top left:
+# x: -5669.879 y: 1764.07 z: 1759.37 ## []
+# upper top right:
+# x: -5347.759 y: 1900.92 z: 1767.68 ## []
+# upper bottom left:
+# x: -5482.189 y: 1476.324 z: 1776.325 ## []
+# upper bottom right:
+# x: -5244.964 y: 1655.256 z: 1792.878 ## []
+# lower top left:
+# x: -5703.879 y: 1643.07 z: -14.628 ## []
+# lower top right:
+# x: -5330.802 y: 1908.115 z: -14.628 ## []
+# lower bottom left:
+# x: -5331.95 y: 1456.56 z: -12.56 ## []
+# lower bottom right:
+# x: -5217. 956 y: 1602.948 z: -7.213 ## []
