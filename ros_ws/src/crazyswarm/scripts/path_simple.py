@@ -13,23 +13,46 @@ TAKEOFF_DURATION = 2.5
 TARGET_HEIGHT = 0.02
 GOTO_DURATION = 3.0
 LAND_DURATION = 3.0
-TIME = np.array([1.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0])
-WP1 = np.array([
-    [1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5, 1.5, 1.0, 0.5],
-    [0.0, 0.5, 1.0, 1.5, 1.5, 1.0, 0.5, 0.0, 0.0, 0.0],
-    [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z]
-    ])
-WP2 = np.array([
-    [-1.0, -1.0, -1.0, -1.0, -1.0,-1.0, -1.0, -1.0, -1.0, -1.0],
-    [0.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 1.0, 1.0],
-    [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z]
-    ])
-# WP3 = np.array([
-#     [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-#     [0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0],
-#     [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z]
-#     ])
-ALL_WAYPOINTS = [WP1, WP2]
+
+# read in the json
+f = open('../data/simulation.json')
+data = json.load(f)
+
+num_timesteps = len(data)
+num_robots = len(data[0]["robot_data"])
+
+time_info = np.zeros(num_timesteps) # holds time values
+robot_position_info = np.zeros((num_timesteps, num_robots, 3)) # holds robot position values
+# the robot's id should be the same as the index
+# there is an assert statement to verify this, in case anything changes in the simulation code
+
+for timestep_index, timestep_log in enumerate(data): 
+    # contents of timestep_log
+    # timestep_log["planner_data"]
+    # timestep_log["robot_data"] per robot info
+    # timestep_log["timestamp"]
+
+    time_info[timestep_index] = timestep_log["timestamp"]
+
+    for robot_index, robot_log in enumerate(timestep_log["robot_data"]): 
+        #  print(timestep_log["robot_data"].keys())
+        assert(robot_index == robot_log["robot_id"])
+        robot_position_info[timestep_index][robot_index] = np.asarray(robot_log["cur_pos"])
+
+
+TIME = time_info*5
+ALL_WAYPOINTS = robot_position_info
+
+
+
+print("time info: ", time_info)
+print("num timesteps: ", num_timesteps)
+print("robot_position_info.shape: ", robot_position_info.shape)
+
+print(ALL_WAYPOINTS[:,0,:])
+print()
+print(ALL_WAYPOINTS[:,1,:])
+
 
 def main():
     swarm = Crazyswarm()
@@ -48,13 +71,13 @@ def main():
     for t in range(1, num_timesteps):
         for i in range(num_drones): 
             # Gets the correct crazyflie 
-            WAYPOINTS = ALL_WAYPOINTS[i] 
+            WAYPOINTS = ALL_WAYPOINTS[:,i,:] 
             # Get the positions for the current timestep
-            positions = WAYPOINTS[:, t] # Gets a vector of all the row values in a specifc column t
+            positions = WAYPOINTS[t, :] # Gets a vector of all the row values in a specifc column t
 
             cf = allcfs.crazyflies[i]
             cf.goTo([positions[0], positions[1], positions[2]], 0.0, (TIME[t] - TIME[t-1]))
-        timeHelper.sleep((TIME[t] - TIME[t-1] + 0.5))
+        timeHelper.sleep((TIME[t] - TIME[t-1])-0.8)
 
     # Land the drones
     allcfs.land(TARGET_HEIGHT, LAND_DURATION)
