@@ -1,5 +1,43 @@
 crazyflies:
 - channel: 100
-  id: 1
-  initialPosition: [1.5, 1.5, 0.0]
-  type: medium
+  id: 20
+  initialPosition:
+  - 2.265
+  - -0.406
+  - 0.026
+  type: default_m4
+- channel: 120
+  id: 21
+  initialPosition:
+  - -3.955
+  - -3.122
+  - 0.036
+  type: default_m1
+- channel: 120
+  id: 30
+  initialPosition:
+  - 2.918
+  - 1.318
+  - 0.031
+  type: default_m2
+- channel: 80
+  id: 35
+  initialPosition:
+  - 1.397
+  - 0.277
+  - 0.026
+  type: default_m3
+- channel: 80
+  id: 44
+  initialPosition:
+  - -6.204
+  - 2.71
+  - 0.032
+  type: default_m4
+- channel: 100
+  id: 47
+  initialPosition:
+  - -5.25
+  - 1.21
+  - 0.018
+  type: default_m3
