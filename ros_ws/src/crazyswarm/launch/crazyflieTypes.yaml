@@ -243,14 +243,11 @@ markerConfigurations:
       "1": [0.0486787,0.0413829,0.0370666]
       "2": [-0.0281034,-0.0355515,0.0362072]
       "3": [0.0494241,-0.0363607,0.0379706]
-  "4":  # for standard Crazyflie
-    numPoints: 4
-    offset: [0.0, 0.0, -0.04]
-    points:
-      "0": [0.0115995,0.00941161,0.0454861]  # top
-      "1": [-0.0378468,-0.03401,0.033387]  # back left   (M3)
-      "2": [-0.0353935,0.0430707,0.0268908]  # back right  (M2)
-      "3": [ -0.0373004,-0.0333516,0.0345423]  # front right (M1)
+  # "3":  # for single marker Crazyflie, replace "3" when use single marker
+  #   numPoints: 1
+  #   offset: [0.0, 0.0, -0.04]
+  #   points:
+  #     "0": [0.0,0.0,0.0]
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":
