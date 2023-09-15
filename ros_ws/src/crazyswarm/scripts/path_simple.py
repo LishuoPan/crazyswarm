@@ -8,6 +8,15 @@ import yaml
 # V2
 # from crazyflie_py import Crazyswarm
 
+import colorsys
+def generateRGBColors(num_colors):
+    output = []
+    num_colors += 1 # to avoid the first color
+    for index in range(1, num_colors):
+        incremented_value = 1.0 * index / num_colors
+        output.append(colorsys.hsv_to_rgb(incremented_value, 0.75, 0.75))
+    return np.asarray(output)
+
 # Environment constants
 Z = 1.0
 TAKEOFF_DURATION = 2.5
@@ -45,13 +54,14 @@ with open('../launch/allCrazyflies_demo.yaml', 'r') as f:
     my_cfs = allcfs['crazyflies']
     indices_dict = {cf['id']: i for i, cf in enumerate(my_cfs)}
 
-TIME = time_info*5
+TIME = time_info*12
 with open('../launch/crazyflies.yaml') as f:
     mycfs = yaml.load(f)
     robot_ids = [cf['id'] for cf in mycfs['crazyflies']]
     print(robot_ids)
 # robot_ids = [13, 21, 23, 24, 25, 27, 28, 30, 31, 33, 34, 35, 36, 38, 40, 41, 43, 44, 47, 50]
 robot_indices = [int(indices_dict[r]) for r in robot_ids]
+print(robot_indices)
 robot_position_info = np.array(robot_position_info)
 ALL_WAYPOINTS = robot_position_info[:, robot_indices, :]
 
@@ -78,9 +88,8 @@ def main():
     for cf in allcfs.crazyflies:
         cf.setParam("ring/effect", 7)
     
-    rgb_bits = [tuple((x >> k) & 0x1 for k in range(3)) for x in range(8)]
-    rgb_bits.pop(0) 
-    # rgb_bits = [(x / 49, (x // 7) / 7, (x % 7) / 7) for x in range(50)]
+    # generate color set
+    rgb_bits = generateRGBColors(num_drones)
 
     for cf, rgb in zip(allcfs.crazyflies, rgb_bits):
         cf.setLEDColor(*rgb)
@@ -99,7 +108,7 @@ def main():
             positions = WAYPOINTS[t, :] # Gets a vector of all the row values in a specifc column t
             cf = allcfs.crazyflies[i]
             cf.goTo([positions[0], positions[1], positions[2]], 0.0, (TIME[t] - TIME[t-1]))
-        timeHelper.sleep((TIME[t] - TIME[t-1]))
+        timeHelper.sleep((TIME[t] - TIME[t-1])*0.45)
 
     # Land the drones
     allcfs.land(TARGET_HEIGHT, LAND_DURATION)
