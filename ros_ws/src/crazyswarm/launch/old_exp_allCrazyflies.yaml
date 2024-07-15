@@ -1,0 +1,231 @@
+crazyflies:
+  - id: 1
+    channel: 80
+    initialPosition: [-1.430, 0.203, 0.021] # end: [4.715, 2.247, 0.050]
+    type: default_m1
+  - id: 2
+    channel: 100
+    initialPosition: [2.391, 2.621, 0.030] # end: [-.864, -2.785, 0.019]
+    type: default_m2
+  - id: 3
+    channel: 120
+    initialPosition: [-5.574, -2.221, 0.017] # end: [-2.805, 2.099, 0.034]
+    type: default_m3
+  - id: 4
+    channel: 80
+    initialPosition: [0.166, -1.352, 0.021] # end: [0.112, 3.237, 0.30]
+    type: default_m4
+  - id: 5
+    channel: 100
+    initialPosition: [3.434, -2.219, 0.027] # end: [-4.307, -0.997, 0.022]
+    type: default_m1
+  - id: 6
+    channel: 120
+    initialPosition: [-3.741, 1.048, 0.021] # end: [4.821, -0.531, 0.042]
+    type: default_m2
+  - id: 8
+    channel: 1000
+    initialPosition: [0.557, -0.003, 0.028] # end: [-2.554, 3.234, 0.030]
+    type: default_m4
+  - id: 9
+    channel: 80
+    initialPosition: [5.809, 0.432, 0.040] # end: [0.678, 1.039, 0.029]
+    type: default_m1
+  - id: 10
+    channel: 1000
+    initialPosition: [4.647, 2.881, 0.051] # end: [6.345, -0.907, 0.041]
+    type: default_m2  
+  - id: 11
+    channel: 100
+    initialPosition: [-6.168, 2.673, 0.028] # end: [-2.138, -0.673, 0.024]
+    type: default_m3
+  - id: 12
+    channel: 1000
+    initialPosition: [-2.032, -2.988, 0.021] # end: [2.108, 0.859, 0.030]
+    type: default_m4
+  - id: 13
+    channel: 1000
+    initialPosition: [1.676, -2.401, 0.027] # end: [-4.378, 0.572, 0.015]
+    type: default_m1  
+  - id: 14
+    channel: 120
+    initialPosition: [-1.494, 3.479, 0.035] # end: [2.853, 0.244, 0.032]
+    type: default_m2
+  - id: 15
+    channel: 80
+    initialPosition: [-2.554, -2.268, 0.018] # end: [-6.054, 1.447, 0.021]
+    type: default_m3
+  - id: 16
+    channel: 100
+    initialPosition: [6.394, 3.820, 0.055] # end: [-3.679, -2.157, 0.013]
+    type: default_m4
+  - id: 17
+    channel: 120
+    initialPosition: [-5.283, 0.089, 0.020] # end: [1.561, -1.651, 0.022]
+    type: default_m1
+  - id: 18
+    channel: 1000
+    initialPosition: [0.699, 2.806, 0.011] # end: [-3.133, -2.927, 0.015]
+    type: default_m2  
+  - id: 19
+    channel: 80
+    initialPosition: [-0.365, 1.072, 0.024] # end: [6.108, -2.641, 0.023]
+    type: default_m3
+  - id: 20
+    channel: 100
+    initialPosition: [2.265, -0.406, 0.026] # end: [3.546, 3.412, 0.040]
+    type: default_m4
+  - id: 21
+    channel: 120
+    initialPosition: [6.090, 0.976, 0.036] # end: [, 1.447, 0.021]
+    type: default_m1
+  - id: 23
+    channel: 80
+    initialPosition: [0.843, -2.029, 0.021] # end: [-1.741, 1.184, 0.023]
+    type: default_m3
+  - id: 24
+    channel: 100
+    initialPosition: [3.943, 1.004, 0.036] # end: [0.919, -0.668, 0.024]
+    type: default_m4
+  - id: 25
+    channel: 120
+    initialPosition: [-4.693, 1.593, 0.004] # end: [1.472, 2.056, 0.024]
+    type: default_m1
+  - id: 27
+    channel: 80
+    initialPosition: [3.840, -0.822, 0.033] # end: [-5.093, -3.035, 0.011]
+    type: default_m3
+  - id: 28
+    channel: 100
+    initialPosition: [-0.864, 1.995, 0.026] # end: [2.384, -2.714, 0.023]
+    type: default_m4
+  - id: 30
+    channel: 120
+    initialPosition: [2.918, 1.318, 0.031] # end: [-1.062, -1.957, 0.019]
+    type: default_m2
+  - id: 31
+    channel: 80
+    initialPosition: [5.497, -1.366, 0.034] # end: [-3.131, -0.072, 0.025]
+    type: default_m3
+  - id: 33
+    channel: 100
+    initialPosition: [-2.603, 0.640, 0.023] # end: [-4.732, 3.133, 0.028]
+    type: default_m1
+  - id: 34
+    channel: 120
+    initialPosition: [-0.383, -0.718, 0.021] # end: [3.228, -1.307, 0.029]
+    type: default_m2
+  - id: 35
+    channel: 80
+    initialPosition: [1.397, 0.277, 0.026] # end: [-6.043, -0.354, 0.020]
+    type: default_m3
+  - id: 36
+    channel: 100
+    initialPosition: [-4.496, -0.422, 0.020] # end: [1.352, 3.022, 0.028]
+    type: default_m4
+  - id: 38
+    channel: 120
+    initialPosition: [5.163, 1.920, 0.043] # end: [4.183, 0.168, 39.198]
+    type: default_m2
+  - id: 40
+    channel: 80
+    initialPosition: [-3.257, 2.494, 0.030] # end: [-0.459, 0.075, 0.025]
+    type: default_m4
+  - id: 41
+    channel: 100
+    initialPosition: [-3.413, -1.496, 0.021] # end: [5.798, 2.979, 0.052]
+    type: default_m1
+  - id: 43
+    channel: 120
+    initialPosition: [-1.357, -1.293, 0.015] # end: [4.548, -3.143, 0.020]
+    type: default_m3
+  - id: 44
+    channel: 80
+    initialPosition: [-6.537, 3.515, 0.032] # end: [0.797, -2.975, 0.019]
+    type: default_m4
+  - id: 47
+    channel: 100
+    initialPosition: [-4.981, 1.232, 0.018] # end: [-1.641, 2.405, 0.029]
+    type: default_m3
+  - id: 50
+    channel: 120
+    initialPosition: [-4.844, -1.577, 0.019] # end: [3.434, 2.269, 0.035]
+    type: default_m2
+
+#############################################################################
+
+# obstacle positions:
+# obstacle 1
+# upper top left: 
+# x: 4252.25 y: -1885.863 z: 1668.923 ## [4.25, -1.85, 1.675]
+# upper top right: 
+# x: 4829.43 y: -1851.346 z: 1676.978 ## [4.85, -1.85, 1.675]
+# upper bottom left:
+# x: 4287.709 y: -2457.499 z: 1664.268 ## [4.25, -2.45, 1.675]
+# upper bottom right:
+# x: 4863.7 y: -2430.301 z: 1675.82 ## [4.85, -2.45, 1.675]
+# lower top left:
+# x: 4240.471 y: -1867.877 z: 26.33 ## [4.25, -1.85, 1.675]
+# lower top right:
+# x: 4921.295 y: -1849.29 z: 32.536 ## [4.95, -1.85, 1.675]
+# lower bottom left:
+# x: 4266.94 y: -2482.18 z: 22.4 ## [4.25, -2.45, 1.675]
+# lower bottom right:
+# x: 4942.325 y: -2449.727 z: 22.956 ## [4.95, -2.45, 1.675]
+
+# obstacle positions:
+# obstacle 2
+# upper top left: 
+# x: 262.863 y: 2045.475  z: 1827.076  ## []
+# upper top right: 
+# x: 832.976 y: 2045.105  z: 1824.085  ## []
+# upper bottom left:
+# x: 283.127 y: 1469.661 z: 1827.258 ## []
+# upper bottom right:
+# x: 854.557 y: 1482.43 z: 1825.067  ## []
+# lower top left:
+# x: 236.32 y: 2044.755  z: 52.062  ## []
+# lower top right:
+# x: 880.402 y: 2048.596 z: 79.821 ## []
+# lower bottom left:
+# x: 236.887 y: 1456.451 z: 91.131 ## []
+# lower bottom right:
+# x: 880.669 y: 1457.509 z:64.209 ## []
+
+# obstacle positions:
+# obstacle 3
+# upper top left: 
+# x: -2916.079 y: -1371.187 z: 1824.494  ## []
+# upper top right: 
+# x: -2344.606 y: -1334.659 z: 1819.4 ## []
+# upper bottom left:
+# x: -2883.752 y: -1936.224 z: 1817.049 ## []
+# upper bottom right:
+# x: -2314.237 y: -1905.444 z: 1819.455 ## []
+# lower top left:
+# x: -2943.531 y: -1348.547 z: 47.584 ## []
+# lower top right:
+# x: -2301.004 y: -1320.335 z: 30.759 ## []
+# lower bottom left:
+# x: -2917.41 y: -1940.58 z: 27.35 ## []
+# lower bottom right:
+# x: -2278.998 y: 1902.697 z: 57.374 ## []
+
+#obstacle positions:
+# obstacle 4
+# upper top left:
+# x: -5669.879 y: 1764.07 z: 1759.37 ## []
+# upper top right:
+# x: -5347.759 y: 1900.92 z: 1767.68 ## []
+# upper bottom left:
+# x: -5482.189 y: 1476.324 z: 1776.325 ## []
+# upper bottom right:
+# x: -5244.964 y: 1655.256 z: 1792.878 ## []
+# lower top left:
+# x: -5703.879 y: 1643.07 z: -14.628 ## []
+# lower top right:
+# x: -5330.802 y: 1908.115 z: -14.628 ## []
+# lower bottom left:
+# x: -5331.95 y: 1456.56 z: -12.56 ## []
+# lower bottom right:
+# x: -5217. 956 y: 1602.948 z: -7.213 ## []

@@ -107,9 +107,9 @@ crazyflieTypes:
     dynamicsConfiguration: 0
     firmwareParams:
       kalman:
-        pNAcc_xy: 4.0 # default 0.5
-        pNAcc_z: 8.0 # default 1.0
-        mNGyro_rollpitch: 0.2 # default 0.1
+        pNAcc_xy: 1.0 # default 0.5
+        pNAcc_z: 2.0 # default 1.0
+        mNGyro_rollpitch: 0.1 # default 0.1
         mNGyro_yaw: 0.1 # default 0.1
       ctrlMel:
         kp_xy: 0.4 #0.6 # p for position
@@ -235,19 +235,19 @@ markerConfigurations:
       "1": [0.0421952,-0.0394636,0.0372561]
       "2": [0.0401444,0.0372406,0.036494]
       "3": [-0.0357723,0.0354601,0.0375267]
-  "3":  # for standard Crazyflie
-    numPoints: 4
-    offset: [0.0, 0.0, -0.04]
-    points:
-      "0": [0.0184815,0.00887332,0.0534412]
-      "1": [0.0486787,0.0413829,0.0370666]
-      "2": [-0.0281034,-0.0355515,0.0362072]
-      "3": [0.0494241,-0.0363607,0.0379706]
-  # "3":  # for single marker Crazyflie, replace "3" when use single marker
-  #   numPoints: 1
+  # "3":  # for standard Crazyflie
+  #   numPoints: 4
   #   offset: [0.0, 0.0, -0.04]
   #   points:
-  #     "0": [0.0,0.0,0.0]
+  #     "0": [0.0184815,0.00887332,0.0534412]
+  #     "1": [0.0486787,0.0413829,0.0370666]
+  #     "2": [-0.0281034,-0.0355515,0.0362072]
+  #     "3": [0.0494241,-0.0363607,0.0379706]
+  "3":  # for single marker Crazyflie, replace "3" when use single marker
+    numPoints: 1
+    offset: [0.0, 0.0, -0.04]
+    points:
+      "0": [0.0,0.0,0.0]
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":

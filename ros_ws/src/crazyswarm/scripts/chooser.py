@@ -29,7 +29,7 @@ if __name__ == '__main__':
 		help="Path to cf2_nrf.bin")
 	args = parser.parse_args()
 
-	if not os.path.exists(os.path.join(args.configpath, "allCrazyflies.yaml")) or \
+	if not os.path.exists(os.path.join(args.configpath, "allCrazyflies_demo.yaml")) or \
 		not os.path.exists(os.path.join(args.configpath, "crazyflieTypes.yaml")) or \
 		not os.path.exists(os.path.join(args.configpath, "crazyflies.yaml")):
 		print("ERROR: Could not find all yaml configuration files in configpath ({}).".format(args.configpath))
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 		with open(os.path.join(args.configpath, "crazyflies.yaml"), 'w') as outfile:
 			yaml.dump({"crazyflies": nodes}, outfile)
 
-	allCrazyflies = read_by_id(os.path.join(args.configpath, "allCrazyflies.yaml"))
+	allCrazyflies = read_by_id(os.path.join(args.configpath, "allCrazyflies_demo_new.yaml"))
 	enabled = read_by_id(os.path.join(args.configpath, "crazyflies.yaml")).keys()
 	with open(os.path.join(args.configpath, "crazyflieTypes.yaml"), 'r') as ymlfile:
 		data = yaml.load(ymlfile)

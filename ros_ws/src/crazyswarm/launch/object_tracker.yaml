@@ -1,5 +1,5 @@
 hostName: vicon
-numMarkerConfigurations: 2
+numMarkerConfigurations: 4
 markerConfigurations:
   "0":
     numPoints: 4
@@ -20,6 +20,17 @@ markerConfigurations:
       "3": [-0.0136136,0.0296063,0.0112455]
       "4": [-0.0292848,0.0437507,0.00688335]
       "5": [-0.028405,-0.0334036,0.00734073]
+  "2":
+    numPoints: 1
+    offset: [0.0, 0.0, 0.01]
+    points:
+      "0": [0.0, 0.0, 0.0]
+  "3":
+    numPoints: 1
+    offset: [0.0, 0.0, 0.01]
+    points:
+      "0": [0.0, 0.0, 0.0]
+
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":
