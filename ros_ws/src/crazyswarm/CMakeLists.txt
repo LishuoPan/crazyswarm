@@ -68,6 +68,7 @@ add_service_files(
   Takeoff.srv
   UpdateParams.srv
   UploadTrajectory.srv
+  UploadBezierTrajectory.srv
 )
 
 add_message_files(
@@ -76,6 +77,7 @@ add_message_files(
   GenericLogData.msg
   FullState.msg
   VelocityWorld.msg
+  TrajectoryBezierPiece.msg
   TrajectoryPolynomialPiece.msg
   Hover.msg
   Position.msg

@@ -10,7 +10,7 @@ import tf_conversions
 from std_srvs.srv import Empty
 import std_msgs
 from crazyswarm.srv import *
-from crazyswarm.msg import TrajectoryPolynomialPiece, FullState, Position, VelocityWorld
+from crazyswarm.msg import TrajectoryPolynomialPiece, TrajectoryBezierPiece, FullState, Position, VelocityWorld
 from tf import TransformListener
 from .visualizer import visNull
 
@@ -92,6 +92,8 @@ class Crazyflie:
         self.goToService = rospy.ServiceProxy(prefix + "/go_to", GoTo)
         rospy.wait_for_service(prefix + "/upload_trajectory")
         self.uploadTrajectoryService = rospy.ServiceProxy(prefix + "/upload_trajectory", UploadTrajectory)
+        rospy.wait_for_service(prefix + "/upload_bezier_trajectory")
+        self.uploadBezierTrajectoryService = rospy.ServiceProxy(prefix + "/upload_bezier_trajectory", UploadBezierTrajectory)
         rospy.wait_for_service(prefix + "/start_trajectory")
         self.startTrajectoryService = rospy.ServiceProxy(prefix + "/start_trajectory", StartTrajectory)
         rospy.wait_for_service(prefix + "/notify_setpoints_stop")
@@ -276,6 +278,29 @@ class Crazyflie:
             piece.poly_yaw = poly.pyaw.p
             pieces.append(piece)
         self.uploadTrajectoryService(trajectoryId, pieceOffset, pieces)
+        
+    def uploadBezierTrajectory(self, trajectoryId, pieceOffset, trajectory):
+        """Uploads a piecewise Bézier trajectory for later execution.
+
+        See bezier_trajectory.py for more information about piecewise Bézier
+        trajectories.
+
+        Args:
+            trajectoryId (int): ID number of this trajectory.
+            pieceOffset (int):
+            trajectory (:obj:`pycrazyswarm.bezier_trajectory.BezierTrajectory`): Trajectory object.
+        """
+        pieces = []
+        for curve in trajectory.curve_list:
+            piece = TrajectoryBezierPiece()
+            piece.duration = rospy.Duration.from_sec(curve.duration)
+            piece.bezier_control_pts_x = curve.ctrl_pts_x.tolist()
+            piece.bezier_control_pts_y = curve.ctrl_pts_y.tolist()
+            piece.bezier_control_pts_z = curve.ctrl_pts_z.tolist()
+            piece.bezier_control_pts_yaw = curve.ctrl_pts_yaw.tolist()
+            pieces.append(piece)
+
+        self.uploadBezierTrajectoryService(trajectoryId, pieceOffset, pieces)
 
     def startTrajectory(self, trajectoryId, timescale = 1.0, reverse = False, relative = True, groupMask = 0):
         """Begins executing a previously uploaded trajectory.
