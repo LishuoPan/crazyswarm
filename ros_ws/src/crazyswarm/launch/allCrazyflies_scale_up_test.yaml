@@ -1,0 +1,97 @@
+crazyflies:
+- channel: 80
+  id: 1
+  initialPosition: [-0.5, 0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 4
+  initialPosition: [0.0, 0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 9
+  initialPosition: [0.5, 0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 10
+  initialPosition: [0.0, 0.0, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 15
+  initialPosition: [-0.5, 0.0, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 16
+  initialPosition: [0.5, 0.0, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 11
+  initialPosition: [-0.5, -0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 20
+  initialPosition: [0.0, -0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 21
+  initialPosition: [0.5, -0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 24
+  initialPosition: [-1.0, 0.0, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 33
+  initialPosition: [-0.5, 1, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 13
+  initialPosition: [-0.5, -1, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 27
+  initialPosition: [0.0, -1, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 44
+  initialPosition: [0.5, -1, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 45
+  initialPosition: [0.0, 1, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 48
+  initialPosition: [0.5, 1, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 8
+  initialPosition: [-1.0, 0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 80
+  id: 38
+  initialPosition: [-1.0, -0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 2
+  initialPosition: [-1.0, 1.0, 0.0]
+  type: defaultSingleMarker
+- channel: 100
+  id: 32
+  initialPosition: [-1.0, -1.0, 0.0]
+  type: defaultSingleMarker
+- channel: 120
+  id: 3
+  initialPosition: [1.0, 0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 120
+  id: 50
+  initialPosition: [1.0, 0.0, 0.0]
+  type: defaultSingleMarker
+- channel: 120
+  id: 25
+  initialPosition: [1.0, -0.5, 0.0]
+  type: defaultSingleMarker
+- channel: 120
+  id: 62
+  initialPosition: [0.0, 1.5, 0.0]
+  type: defaultSingleMarker
