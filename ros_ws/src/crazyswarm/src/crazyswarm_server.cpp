@@ -7,6 +7,7 @@
 #include "crazyswarm/GenericLogData.h"
 #include "crazyswarm/UpdateParams.h"
 #include "crazyswarm/UploadTrajectory.h"
+#include "crazyswarm/UploadBezierTrajectory.h"
 #include "crazyswarm/NotifySetpointsStop.h"
 #undef major
 #undef minor
@@ -134,6 +135,7 @@ public:
     , m_type(type)
     , m_serviceUpdateParams()
     , m_serviceUploadTrajectory()
+    , m_serviceUploadBezierTrajectory()
     , m_serviceStartTrajectory()
     , m_serviceTakeoff()
     , m_serviceLand()
@@ -152,6 +154,7 @@ public:
     ros::NodeHandle n;
     n.setCallbackQueue(&queue);
     m_serviceUploadTrajectory = n.advertiseService(tf_prefix + "/upload_trajectory", &CrazyflieROS::uploadTrajectory, this);
+    m_serviceUploadBezierTrajectory = n.advertiseService(tf_prefix + "upload_bezier_trajectory", &CrazyflieROS::uploadBezierTrajectory, this);
     m_serviceStartTrajectory = n.advertiseService(tf_prefix + "/start_trajectory", &CrazyflieROS::startTrajectory, this);
     m_serviceTakeoff = n.advertiseService(tf_prefix + "/takeoff", &CrazyflieROS::takeoff, this);
     m_serviceLand = n.advertiseService(tf_prefix + "/land", &CrazyflieROS::land, this);
@@ -338,6 +341,36 @@ public:
 
     ROS_INFO("[%s] Uploaded trajectory", m_frame.c_str());
 
+
+    return true;
+  }
+
+  bool uploadBezierTrajectory(
+    crazyswarm::UploadBezierTrajectory::Request& req,
+    crazyswarm::UploadBezierTrajectory::Response& res)
+  {
+    ROS_INFO("[%s] Upload Bezier trajectory", m_frame.c_str());
+
+    std::vector<Crazyflie::bezier4d> pieces(req.pieces.size());
+    for (size_t i = 0; i < pieces.size(); ++i) {
+      if (   req.pieces[i].bezier_x.size() != 4
+          || req.pieces[i].bezier_y.size() != 4
+          || req.pieces[i].bezier_z.size() != 4
+          || req.pieces[i].bezier_yaw.size() != 4) {
+        ROS_FATAL("Wrong number of pieces!");
+        return false;
+      }
+      pieces[i].duration = req.pieces[i].duration.toSec();
+      for (size_t j = 0; j < 4; ++j) {
+        pieces[i].b[0][j] = req.pieces[i].bezier_control_pts_x[j];
+        pieces[i].b[1][j] = req.pieces[i].bezier_control_pts_y[j];
+        pieces[i].b[2][j] = req.pieces[i].bezier_control_pts_z[j];
+        pieces[i].b[3][j] = req.pieces[i].bezier_control_pts_yaw[j];
+      }
+    }
+    m_cf.uploadBezierTrajectory(req.trajectoryId, req.pieceOffset, pieces);
+
+    ROS_INFO("[%s] Uploaded Bezier trajectory", m_frame.c_str());
 
     return true;
   }
@@ -745,6 +778,7 @@ private:
 
   ros::ServiceServer m_serviceUpdateParams;
   ros::ServiceServer m_serviceUploadTrajectory;
+  ros::ServiceServer m_serviceUploadBezierTrajectory;
   ros::ServiceServer m_serviceStartTrajectory;
   ros::ServiceServer m_serviceTakeoff;
   ros::ServiceServer m_serviceLand;
