@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Z = 1.0
     TAKEOFF_DURATION = 2.5
     TARGET_HEIGHT = 0.02
-    ALL_TRAJ_PATH = "./cf_trajectories/10piece_result/"
+    ALL_TRAJ_PATH = "./cf_trajectories/20piece_parallel/"
     num_robots = 24  ## TODO change to read
     TIMESCALE = 1.0
 
@@ -41,6 +41,14 @@ if __name__ == "__main__":
     timeHelper = swarm.timeHelper
     allcfs = swarm.allcfs
     assert(len(allcfs.crazyflies) == num_robots)
+
+    # generate color set
+    for cf in allcfs.crazyflies:
+        cf.setParam("ring/effect", 7)
+    rgb_bits = generateRGBColors(num_robots)
+
+    for cf, rgb in zip(allcfs.crazyflies, rgb_bits):
+        cf.setLEDColor(*rgb)
 
     all_trajs = []
     max_duration = 0
