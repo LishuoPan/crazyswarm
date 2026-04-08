@@ -13,18 +13,26 @@ class FullStateCmd:
 
         self.hz = 100
         self.Z = 0.5
-        self.goto_duration = 2
-        self.duration = 30
+        self.take_off_duration = 2
+        self.goto_duration = 4
+        self.duration = 60
+        # self.duration = 60
+        init_pos = np.array([1.0,0.0,0.7])
 
         control_sub = rospy.Subscriber('/control', Float64MultiArray, self.update_control)
         self.control = None
         take_off_pub = rospy.Publisher('/take_off', Bool, queue_size=10)
 
+        # LED color
+        self.cf.setParam("ring/effect", 7)
+        rgb = (1.0, 1.0, 1.0)
+        self.cf.setLEDColor(*rgb)
+
         # control loop
         # take off
-        self.cf.takeoff(targetHeight=self.Z, duration=self.Z + 1.0)
-        self.timeHelper.sleep(self.Z + 2.0)
-        self.cf.goTo(np.array([0, 0, self.Z]), 0, self.goto_duration)
+        self.cf.takeoff(targetHeight=self.Z, duration=self.take_off_duration)
+        self.timeHelper.sleep(self.Z + self.take_off_duration)
+        self.cf.goTo(init_pos, 0, self.goto_duration)
         self.timeHelper.sleep(0.5 + self.goto_duration)
 
         task_off_msg = Bool()
@@ -35,11 +43,11 @@ class FullStateCmd:
         self.fullStateCmd()
 
         self.cf.notifySetpointsStop()
-        self.cf.goTo(np.array([0,0,self.Z]), 0, self.goto_duration)
-        self.timeHelper.sleep(0.5 + self.goto_duration)
+        # self.cf.goTo(np.array([0,0,self.Z]), 0, self.goto_duration)
+        # self.timeHelper.sleep(0.5 + self.goto_duration)
 
-        self.cf.land(targetHeight=0.03, duration=self.Z + 1.0)
-        self.timeHelper.sleep(self.Z + 2.0)
+        self.cf.land(targetHeight=0.03, duration=self.take_off_duration)
+        self.timeHelper.sleep(self.Z + self.take_off_duration)
 
     def update_control(self, msg):
         self.control = np.array(msg.data)
